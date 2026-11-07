@@ -1,0 +1,14 @@
+{
+  "version": "2.0.0",
+  "tasks": [{
+    "label": "Run BluePixel Studio",
+    "type": "npm",
+    "script": "dev",
+    "problemMatcher": []
+  },{
+    "label": "Build Windows installer",
+    "type": "npm",
+    "script": "dist",
+    "problemMatcher": []
+  }]
+}

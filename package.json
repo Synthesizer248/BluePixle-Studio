@@ -1,0 +1,41 @@
+{
+  "name": "bluepixel-studio-windows",
+  "version": "1.2.0",
+  "description": "Offline embedded display designer for Windows",
+  "author": "BluePixel Studio",
+  "license": "UNLICENSED",
+  "main": "main.js",
+  "scripts": {
+    "dev": "electron .",
+    "dist": "electron-builder --win nsis",
+    "dist:dir": "electron-builder --dir"
+  },
+  "devDependencies": {
+    "electron": "^45.2.3",
+    "electron-builder": "^26.18.0"
+  },
+  "build": {
+    "appId": "local.bluepixel.studio",
+    "productName": "BluePixel Studio",
+    "directories": {
+      "output": "release"
+    },
+    "files": [
+      "main.js",
+      "app/**/*",
+      "package.json"
+    ],
+    "win": {
+      "target": [
+        "nsis"
+      ]
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "createDesktopShortcut": true,
+      "createStartMenuShortcut": true,
+      "shortcutName": "BluePixel Studio"
+    }
+  }
+}
